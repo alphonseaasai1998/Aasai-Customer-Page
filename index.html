@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SRIDEVI TEXTILES</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <img
+            src="Sridevilogo.jpg"
+            alt="SRIDEVI TEXTILES"
+        >
+
+        <div class="shop-name">
+
+            <span class="brand-name">
+             
+            </span>
+
+            <span class="brand-subtitle">
+               
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav class="desktop-nav">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#about">
+            About Us
+        </a>
+
+        <a href="#products">
+            Products
+        </a>
+
+        <a href="#contact">
+            Contact Us
+        </a>
+
+    </nav>
+
+
+    <div class="header-actions">
+
+        <button
+            onclick="openSearch()"
+            title="Search"
+        >
+            🔍
+        </button>
+
+        <button
+            onclick="openLogin()"
+            title="Login"
+        >
+            👤
+        </button>
+
+        <button
+            onclick="openCart()"
+            class="cart-button"
+            title="Cart"
+        >
+
+            🛒
+
+            <span id="cartCount">
+                0
+            </span>
+
+        </button>
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE MENU
+===================================================== -->
+
+<div
+    id="mobileMenu"
+    class="mobile-menu"
+>
+
+    <a
+        href="#home"
+        onclick="closeMenu()"
+    >
+        Home
+    </a>
+
+    <a
+        href="#products"
+        onclick="closeMenu()"
+    >
+        Products
+    </a>
+
+    <a
+        href="#about"
+        onclick="closeMenu()"
+    >
+        About Us
+    </a>
+
+    <a
+        href="#contact"
+        onclick="closeMenu()"
+    >
+        Contact Us
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     SEARCH
+===================================================== -->
+
+<div
+    id="searchOverlay"
+    class="search-overlay"
+>
+
+    <div class="search-box">
+
+        <button
+            class="close-btn"
+            onclick="closeSearch()"
+        >
+            ×
+        </button>
+
+        <h2>
+            Search Products
+        </h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search saree, shirt, dress..."
+            onkeyup="searchProducts()"
+        >
+
+        <div id="searchResults"></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-content">
+
+        <p class="hero-small">
+            WELCOME TO
+        </p>
+
+        <h1>
+
+            SRIDEVI
+
+            <span>
+                TEXTILES
+            </span>
+
+        </h1>
+
+        <p>
+            Fashion for Everyone
+        </p>
+
+        <a
+            href="#products"
+            class="hero-btn"
+        >
+            Shop Now
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORY
+===================================================== -->
+
+<section class="category-section">
+
+    <div class="section-heading">
+
+        <span>
+            EXPLORE
+        </span>
+
+        <h2>
+            Shop By Category
+        </h2>
+
+    </div>
+
+
+    <div class="category-marquee">
+
+        <div class="category-track">
+
+
+            <div
+                class="category-card"
+                onclick="filterCategory('Men')"
+            >
+
+                <img
+                    src="https://aasaicodes.s3.ap-south-1.amazonaws.com/Menns.jpg"
+                    alt="Men Fashion"
+                >
+
+                <div class="category-overlay">
+
+                    <h3>
+                        Men
+                    </h3>
+
+                    <p>
+                        Explore Collection
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="category-card"
+                onclick="filterCategory('Women')"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80"
+                    alt="Women Fashion"
+                >
+
+                <div class="category-overlay">
+
+                    <h3>
+                        Women
+                    </h3>
+
+                    <p>
+                        Explore Collection
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="category-card"
+                onclick="filterCategory('Kids')"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=format&fit=crop&w=900&q=80"
+                    alt="Kids Fashion"
+                >
+
+                <div class="category-overlay">
+
+                    <h3>
+                        Kids
+                    </h3>
+
+                    <p>
+                        Explore Collection
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div
+                class="category-card"
+                onclick="filterCategory('Accessories')"
+            >
+
+                <img
+                    src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=80"
+                    alt="Accessories"
+                >
+
+                <div class="category-overlay">
+
+                    <h3>
+                        Accessories
+                    </h3>
+
+                    <p>
+                        Explore Collection
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+    id="about"
+    class="about-section"
+>
+
+    <div class="about-image">
+
+        <img
+            src="https://aasaicodes.s3.ap-south-1.amazonaws.com/About+3.jpg"
+            alt="Textile Collection"
+        >
+
+    </div>
+
+
+    <div class="about-content">
+
+        <span>
+            ABOUT SRIDEVI TEXTILES
+        </span>
+
+        <h2>
+
+            Fashion That
+
+            <strong>
+                Feels Special
+            </strong>
+
+        </h2>
+
+        <p>
+            Welcome to SRIDEVI TEXTILES, your destination for
+            stylish and comfortable clothing for the entire family.
+        </p>
+
+        <p>
+            We bring together beautiful collections for men,
+            women, kids and accessories with quality and
+            affordable pricing.
+        </p>
+
+
+        <div class="about-features">
+
+            <div>
+                <b>✓</b>
+                Quality Products
+            </div>
+
+            <div>
+                <b>✓</b>
+                Affordable Prices
+            </div>
+
+            <div>
+                <b>✓</b>
+                Latest Collections
+            </div>
+
+            <div>
+                <b>✓</b>
+                Customer Friendly
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section
+    id="products"
+    class="products-section"
+>
+
+    <div class="section-heading">
+
+        <span>
+            OUR COLLECTION
+        </span>
+
+        <h2>
+            Latest Products
+        </h2>
+
+        <p>
+            Discover our latest fashion collection
+        </p>
+
+    </div>
+
+
+    <div class="product-tabs">
+
+        <button
+            class="active"
+            onclick="filterCategory('All', this)"
+        >
+            All
+        </button>
+
+        <button
+            onclick="filterCategory('Men', this)"
+        >
+            Men
+        </button>
+
+        <button
+            onclick="filterCategory('Women', this)"
+        >
+            Women
+        </button>
+
+        <button
+            onclick="filterCategory('Kids', this)"
+        >
+            Kids
+        </button>
+
+        <button
+            onclick="filterCategory('Accessories', this)"
+        >
+            Accessories
+        </button>
+
+    </div>
+
+
+    <div
+        id="productGrid"
+        class="product-grid"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEW ARRIVAL
+===================================================== -->
+
+<section class="new-arrival">
+
+    <div class="arrival-image">
+
+        <img
+            id="arrivalImage"
+            src=""
+            alt="New Arrival"
+        >
+
+        <span>
+            NEW
+        </span>
+
+    </div>
+
+
+    <div class="arrival-content">
+
+        <small>
+            JUST ARRIVED FOR BRIDALS
+        </small>
+
+        <h2 id="arrivalTitle">
+            Premium Fashion Collection
+        </h2>
+
+        <p id="arrivalDescription">
+            Discover our latest collection designed
+            for modern style and everyday comfort.
+        </p>
+
+
+        <div class="arrival-price">
+
+            <strong id="arrivalPrice">
+                ₹899
+            </strong>
+
+            <del>
+                ₹1,499
+            </del>
+
+        </div>
+
+
+        <button onclick="openArrivalProduct()">
+            View Product
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+    id="contact"
+    class="contact-section"
+>
+
+    <div class="section-heading">
+
+        <span>
+            GET IN TOUCH
+        </span>
+
+        <h2>
+            Contact Us
+        </h2>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                📍
+            </div>
+
+            <h3>
+                Visit Us
+            </h3>
+
+            <p>
+                SRIDEVI TEXTILES<br>
+                Your Local Textile Store
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                📞
+            </div>
+
+            <h3>
+                Call Us
+            </h3>
+
+            <p>
+                +91 8939 464740
+            </p>
+
+        </div>
+
+
+
+        <div class="contact-card">
+
+            <div class="contact-icon">
+                ✉️
+            </div>
+
+            <h3>
+                Email
+            </h3>
+
+            <p>
+                info@sridevitextiles.com
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        SRIDEVI TEXTILES
+    </div>
+
+    <p>
+        Fashion • Quality • Style
+    </p>
+
+
+    <div class="footer-links">
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#products">
+            Products
+        </a>
+
+        <a href="#about">
+            About Us
+        </a>
+
+        <a href="#contact">
+            Contact Us
+        </a>
+
+    </div>
+
+
+    <p class="copyright">
+        © 2026 SRIDEVI TEXTILES. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =====================================================
+     PRODUCT DETAILS MODAL
+===================================================== -->
+
+<div
+    id="productModal"
+    class="modal"
+>
+
+    <div class="modal-content product-detail">
+
+        <button
+            class="modal-close"
+            onclick="closeProduct()"
+        >
+            ×
+        </button>
+
+
+        <!-- PRODUCT GALLERY -->
+
+        <div class="detail-image">
+
+            <div class="main-product-image">
+
+                <img
+                    id="detailImage"
+                    src=""
+                    alt="Product"
+                >
+
+            </div>
+
+
+            <div
+                id="productThumbnails"
+                class="product-thumbnails"
+            ></div>
+
+        </div>
+
+
+        <!-- PRODUCT INFORMATION -->
+
+        <div class="detail-info">
+
+            <span id="detailCategory"></span>
+
+            <h2 id="detailName"></h2>
+
+            <div
+                id="detailRating"
+                class="rating"
+            ></div>
+
+
+            <div class="detail-price">
+
+                <strong
+                    id="detailPrice"
+                ></strong>
+
+                <del
+                    id="detailOldPrice"
+                ></del>
+
+            </div>
+
+
+            <p id="detailDescription"></p>
+
+
+            <h4>
+                Select Size
+            </h4>
+
+            <div
+                id="sizeOptions"
+                class="sizes"
+            ></div>
+
+
+            <button
+                id="detailAddButton"
+                class="add-cart-btn"
+            >
+                Add To Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     CART
+===================================================== -->
+
+<div
+    id="cartPanel"
+    class="side-panel"
+>
+
+    <div class="side-header">
+
+        <h2>
+            My Cart
+        </h2>
+
+        <button onclick="closeCart()">
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        id="cartItems"
+        class="cart-items"
+    ></div>
+
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <button
+            onclick="openCheckout()"
+            class="checkout-btn"
+        >
+            Proceed To Checkout
+        </button>
+
+    </div>
+
+</div>
+
+
+<div
+    id="cartBackdrop"
+    class="backdrop"
+    onclick="closeCart()"
+></div>
+
+
+
+<!-- =====================================================
+     CHECKOUT
+===================================================== -->
+
+<div
+    id="checkoutModal"
+    class="modal"
+>
+
+    <div class="modal-content checkout">
+
+        <button
+            class="modal-close"
+            onclick="closeCheckout()"
+        >
+            ×
+        </button>
+
+
+        <h2>
+            Checkout
+        </h2>
+
+
+        <form onsubmit="placeOrder(event)">
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Full Name"
+                required
+            >
+
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Mobile Number"
+                required
+            >
+
+
+            <textarea
+                id="customerAddress"
+                placeholder="Delivery Address"
+                required
+            ></textarea>
+
+
+            <h3>
+                Payment Method
+            </h3>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="UPI"
+                    checked
+                >
+
+                <span>
+                    📱 UPI Payment
+                </span>
+
+            </label>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="COD"
+                >
+
+                <span>
+                    💵 Cash On Delivery
+                </span>
+
+            </label>
+
+
+            <div class="no-card">
+                🚫 Card payment is not available.
+            </div>
+
+
+            <button
+                type="submit"
+                class="place-order"
+            >
+                Place Order
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     LOGIN
+===================================================== -->
+
+<div
+    id="loginModal"
+    class="modal"
+>
+
+    <div class="modal-content login-box">
+
+        <button
+            class="modal-close"
+            onclick="closeLogin()"
+        >
+            ×
+        </button>
+
+
+        <div class="login-icon">
+            👤
+        </div>
+
+
+        <h2>
+            Welcome Back
+        </h2>
+
+
+        <p>
+            Login to your SRIDEVI TEXTILES account
+        </p>
+
+
+        <input
+            type="tel"
+            placeholder="Mobile Number"
+        >
+
+
+        <button onclick="loginUser()">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
